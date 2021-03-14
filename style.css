@@ -63,7 +63,7 @@ article:nth-child(1)>aside>nav {
   padding: 35px 0;
 }
 
-article:nth-child(1)>aside>nav>div {
+article:nth-child(1)>aside>nav>a {
   height: 45px;
   display: flex;
   align-items: center;
@@ -72,15 +72,17 @@ article:nth-child(1)>aside>nav>div {
   border-top-right-radius: 25px;
   border-bottom-right-radius: 25px;
   cursor: pointer;
+  text-decoration: none;
+  color: white;
 }
-article:nth-child(1)>aside>nav>div:hover {
+article:nth-child(1)>aside>nav>a:hover {
   background-color: #00000015;
 }
-article:nth-child(1)>aside>nav>div>:nth-child(1) {
+article:nth-child(1)>aside>nav>a>:nth-child(1) {
   margin-right: 15px;
 }
 
-article:nth-child(1)>aside>nav>div.active {
+article:nth-child(1)>aside>nav>a.active {
   background-color: #FFCA3A;
 }
 
@@ -88,9 +90,9 @@ article:nth-child(1)>aside svg {
   stroke: white;
 }
 
-article:nth-child(1)>aside div.active {
+article:nth-child(1)>aside a.active {
   color: black;
 }
-article:nth-child(1)>aside div.active svg {
+article:nth-child(1)>aside a.active svg {
   stroke: black;
 }
