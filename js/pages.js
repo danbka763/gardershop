@@ -22,7 +22,7 @@ function addLeftBlock(url) {
         <a href="${url}" id="Homepage">
           Главная
         </a>
-        <a href="${url}Orders" id="Orders">
+        <a href="${url}Orders/index.html" id="Orders">
           Заказы
         </a>
         <a id="${url}Products">
