@@ -7,6 +7,14 @@
   --header-bg-color: #4854A2;
   --left-block-color: white;
   --aside-bg-color: #232323;
+  --main-bg-color: #F5F5F5;
+}
+
+input:active, input:focus, button:active, button:focus {
+  outline: none;
+}
+input::-moz-focus-inner, button::-moz-focus-inner {
+  border: 0;
 }
 
 html, body {
@@ -19,14 +27,18 @@ body {
   font-family: 'Roboto', sans-serif;
 }
 
+
+/* Боковая панель */
+
+
 article:nth-child(1) {
-  width: 327px;
+  width: 410px;
   position: relative;
   height: 100%;
-  min-height: 100%;
   color: var(--left-block-color);
   font-style: normal;
   font-weight: normal;
+  filter: drop-shadow(0px 0px 12px rgba(0, 0, 0, 0.37));
 }
 
 header {
@@ -95,4 +107,310 @@ article:nth-child(1)>aside a.active {
 }
 article:nth-child(1)>aside a.active svg {
   stroke: black;
+}
+
+
+/* контент страницы */
+
+article:nth-child(2) {
+  background-color: var(--main-bg-color);
+  width: 100%;
+  position: relative;
+  height: 100%;
+  padding: 30px;
+}
+
+article:nth-child(2).not_main {
+  background-color: var(--main-bg-color);
+  border-top: 200px solid #FF595E;
+}
+
+article:nth-child(2).not_main>main {
+  position: relative;
+  top: -200px;
+  height: 100%;
+}
+
+article:nth-child(2) h3 {
+  font-weight: 400;
+  font-size: 18px;
+  font-style: normal;
+}
+
+article:nth-child(2) section.small-blocks {
+  display: flex;
+  margin-top: 23px;
+}
+
+article:nth-child(2) section.small-blocks>div {
+  width: 190px; height: 230px;
+  background-color: white;
+}
+article:nth-child(2) section.small-blocks>div>div {
+  margin: 16px;
+}
+article:nth-child(2) section.small-blocks h3 {
+  font-size: 16px;
+  color: #00000054;
+}
+
+article:nth-child(2).not_main .top_block {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+article:nth-child(2).not_main #icon {
+  font-size: 24px;
+  color: white;
+  display: flex;
+  align-items: center;
+}
+
+article:nth-child(2).not_main #icon>:nth-child(1) {
+  margin-right: 16px;
+  position: relative;
+  top: 3px;
+}
+
+article:nth-child(2).not_main input {
+  width: 376px; height: 48px;
+  border: 0;
+  border-radius: 25px;
+  padding: 0 52px;
+}
+
+article:nth-child(2).not_main #search {
+  display: flex;
+  align-items: center;
+}
+
+article:nth-child(2).not_main #search>:nth-child(1) {
+  position: relative;
+  top: 2px;
+  left: 38px;
+}
+
+article:nth-child(2).not_main #search button {
+  margin-left: 30px;
+  width: 174px; height: 36px;
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+article:nth-child(2).not_main section.table,
+article:nth-child(2).not_main section.block-info {
+  position: relative;
+  width: 100%;
+  background-color: white;
+  margin-top: 43px;
+  border-top-left-radius: 8px;
+  border-top-right-radius: 8px;
+  border: 1px solid #00000012;
+  display: flex;
+  flex-wrap: wrap;
+}
+article:nth-child(2).not_main section.table {
+  align-content: space-between;
+}
+
+article:nth-child(2).not_main section.table>div {
+  width: 100%;
+}
+
+article:nth-child(2).not_main section.table div.strings,
+article:nth-child(2).not_main section.block-info>div.info {
+  overflow-y: scroll;
+}
+article:nth-child(2).not_main section.table div.strings::-webkit-scrollbar,
+article:nth-child(2).not_main section.block-info>div.info::-webkit-scrollbar {
+  width: 5px;
+  background-color: #f9f9fd;
+}
+article:nth-child(2).not_main section.table div.strings::-webkit-scrollbar-thumb,
+article:nth-child(2).not_main section.block-info>div.info::-webkit-scrollbar-thumb {
+  background-color: #4854A240;
+}
+
+article:nth-child(2).not_main section.table div.heightTable,
+article:nth-child(2).not_main section.table a.string {
+  display: grid;
+  font-size: 12px;
+  align-items: center;
+}
+article:nth-child(2).not_main section.table0 div.heightTable,
+article:nth-child(2).not_main section.table0 a.string {
+  grid-template-columns: 86px 120px 109px 118px 79px 164px 130px;
+}
+article:nth-child(2).not_main section.table1 div.heightTable,
+article:nth-child(2).not_main section.table1 a.string {
+  grid-template-columns: 86px 102px 133px 109px 110px 90px 133px 130px;
+}
+article:nth-child(2).not_main section.table2 div.heightTable,
+article:nth-child(2).not_main section.table2 a.string {
+  grid-template-columns: 86px 102px 133px 109px 110px 90px 133px;
+}
+article:nth-child(2).not_main section.table3 div.heightTable,
+article:nth-child(2).not_main section.table3 a.string {
+  grid-template-columns: 86px 102px 133px 169px 150px 133px;
+}
+article:nth-child(2).not_main section.table div.heightTable {
+  color: #00000054;
+  height: 77px;
+  border-bottom: 1px solid #00000012;
+}
+article:nth-child(2).not_main section.table a.string {
+  /* color: #00000054; */
+  height: 77px;
+  border-bottom: 1px solid #00000012;
+  text-decoration: none;
+  color: black;
+}
+
+article:nth-child(2).not_main section.table div.status0 {
+  background-color: #4854A2;
+  color: white;
+  padding: 1px;
+  max-width: 116px;
+}
+article:nth-child(2).not_main section.table div.status1 {
+  background-color: #FFCA3A;
+  color: white;
+  padding: 1px;
+  max-width: 38px;
+}
+article:nth-child(2).not_main section.table div.status2 {
+  background-color: #8AC926;
+  color: white;
+  padding: 1px;
+  max-width: 58px;
+}
+article:nth-child(2).not_main section.table div.status3 {
+  background-color: #FF595E;
+  color: white;
+  padding: 1px;
+  max-width: 50px;
+}
+
+article:nth-child(2).not_main section.table div.heightTable>:nth-child(1),
+article:nth-child(2).not_main section.table a.string>:nth-child(1) {
+  text-align: center;
+}
+
+article:nth-child(2).not_main footer {
+  width: 100%; height: 62px;
+  border-top: 1px solid #00000012;
+  display: flex;
+  justify-content: flex-end;
+}
+
+article:nth-child(2).not_main footer>div {
+  display: flex; 
+  align-items: center;
+  width: 230px;
+  font-size: 12px;
+  color: #00000054;
+}
+
+article:nth-child(2).not_main footer .icons {
+  display: flex;
+  justify-content: space-between;
+  width: 50px;
+  align-items: center;
+  margin-left: 30px;
+}
+
+article:nth-child(2).not_main footer .icons>:nth-child(2){
+  transform: rotate(180deg);
+  position: relative;
+  top: -2px;
+}
+
+article:nth-child(2).not_main section.block-info {
+  top: 18px;
+  align-content: flex-start;
+}
+
+article:nth-child(2).not_main section.block-info>div {
+  width: 100%;
+  padding: 0 30px;
+  font-size: 14px;
+}
+article:nth-child(2).not_main section.block-info>div:nth-child(1) {
+  color: #00000054;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border-bottom: 1px solid #00000012;
+  height: 77px;
+}
+article:nth-child(2).not_main section.block-info>div:nth-child(2) {
+  padding: 30px 30px 0;
+}
+
+article:nth-child(2).not_main section.block-info h2 {
+  color: #00000054;
+  display: flex;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  margin-top: 50px;
+}
+article:nth-child(2).not_main section.block-info h2:nth-child(1) {
+  margin-top: 0;
+}
+article:nth-child(2).not_main section.block-info h2 svg {
+  margin-right: 16px;
+}
+
+article:nth-child(2).not_main section.block-info h2.pay {
+  margin-bottom: 50px;
+}
+article:nth-child(2).not_main section.block-info h2.pay div:nth-child(3) {
+  position: relative;
+  top: 20px;
+  right: 67px;
+  font-size: 14px;
+}
+
+article:nth-child(2).not_main section.block-info table {
+  text-align: left;
+  border-spacing: 0;
+  margin-bottom: 20px;
+  width: 100%;
+}
+article:nth-child(2).not_main section.block-info th {
+  font-weight: normal;
+  color: #00000054;
+}
+article:nth-child(2).not_main section.block-info th,
+article:nth-child(2).not_main section.block-info td {
+  border-bottom: 1px solid #00000012;
+  padding: 30px 16px;
+}
+
+article:nth-child(2).not_main section.block-info .comment h2 {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+article:nth-child(2).not_main section.block-info .price>div {
+  display: grid;
+  grid-template-columns: 50% 50%;
+  align-items: center;
+  height: 73px;
+  border-bottom: 1px solid #00000012;
+  color: #00000054;
+}
+article:nth-child(2).not_main section.block-info .price>div:nth-child(2) {
+  border-bottom: 1px solid #00000054;
+}
+article:nth-child(2).not_main section.block-info .price>div:nth-child(3) {
+  border-bottom: 0;
+  color: black;
+}
+article:nth-child(2).not_main section.block-info .price>div:nth-child(3)>:nth-child(1) {
+  font-weight: 600;
 }

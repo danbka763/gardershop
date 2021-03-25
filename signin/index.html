@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='http://fonts.googleapis.com/css?family=Roboto' rel='stylesheet' type='text/css'>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+  <link rel="stylesheet" href="auth.css">
+  <title>GARDERSHOP - авторизация</title>
+</head>
+<body>
+  <section>
+    <main class="preloaderMain">
+      <div class="preloader"></div>
+      <div style="display: none;" id="authForm">
+        <div class="logo">
+          <img src="../PNG/logoAuth.png" alt="logo">
+        </div>
+        <h1>Вход в панель магазина</h1>
+        <input type="text" placeholder="Логин*" id="login" onkeyup="openButton()">
+        <input type="password" placeholder="Пароль*" id="pass" onkeyup="openButton()">
+        <button id="authButton" disabled onclick="login()">Войти</button>
+      </div>
+    </main>
+  </section>
+
+  <script src="auth.js"></script>
+
+</body>
+</html>
